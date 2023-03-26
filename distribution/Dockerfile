@@ -36,4 +36,4 @@ RUN sed -i 's|<Context>|<Context>\
   /usr/local/tomcat/conf/context.xml
 # Copy default HSQL DB for testing ...
 RUN mkdir -p ${DB_BASE_DIR}/db
-COPY db/ ${DB_BASE_DIR}/db
+COPY wise-webapp/target/db ${DB_BASE_DIR}/db
