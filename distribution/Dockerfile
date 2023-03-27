@@ -14,7 +14,7 @@ ENV JAVA_OPTS="-XX:+PrintFlagsFinal -XX:InitialRAMPercentage=30 -XX:MaxRAMPercen
 ENV database.base.url=${DB_BASE_DIR}
 
 # Copy wisemapping distribution ...
-COPY wisemapping.war /tmp
+COPY wise-webapp/target/wisemapping.war /tmp
 RUN mkdir ${WEBAPP_TARGET_DIR}
 RUN cd ${WEBAPP_TARGET_DIR} && jar -xvf /tmp/wisemapping.war
 RUN rm /tmp/wisemapping.war
